@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\CMakeFiles\af57a99400d33ba08d7d73b0e7064f2e\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8AD33936-2E2F-3FEC-A729-DD94DCA12513}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

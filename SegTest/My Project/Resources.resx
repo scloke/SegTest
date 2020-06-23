@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextureCardboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextureCardboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextureVintage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextureVintage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XAMLBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLBack.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLBackBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLBackBack.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLBackBackGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLBackBackGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLBackGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLBackGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLConfiguration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLConfiguration.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLConfigurationGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLConfigurationGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLExit.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLForward.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLForwardForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLForwardForward.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLForwardForwardGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLForwardForwardGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLForwardGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLForwardGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLGrabCut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLGrabCut.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLGrabCutGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLGrabCutGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLGroundOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLGroundOrange.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLHold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLHold.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLHoldGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLHoldGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLLeft.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLLoadFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLLoadFile.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLLoadStepActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLLoadStepActive.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLLoadStepGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLLoadStepGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLLoadStepInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLLoadStepInactive.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMain.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkBackground.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerAccuracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerAccuracy.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerGround.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerNoise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerNoise.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerSave.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerScissors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerScissors.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerStar.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkerVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkerVideo.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMarkForeground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMarkForeground.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLMinus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLMinus.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLNo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLNo.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLNoGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLNoGrey.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLPencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLPencil.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLPencilOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLPencilOrange.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLPlus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLPlus.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLReplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLReplay.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLReplayGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLReplayGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLRight.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSave.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSaveFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSaveFile.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSaveVideoActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSaveVideoActive.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSaveVideoInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSaveVideoInactive.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSitting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSitting.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLSittingGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLSittingGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLStanding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLStanding.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLStandingGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLStandingGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLView.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLViewGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLViewGray.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLYes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLYes.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="XAMLYesGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XAMLYesGrey.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+</root>

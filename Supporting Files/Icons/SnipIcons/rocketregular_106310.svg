@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 500 500"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:#303030;stroke-width:5}
+    .str1 {stroke:#303030;stroke-width:10}
+    .str3 {stroke:#303030;stroke-width:10;stroke-linejoin:round}
+    .str4 {stroke:#303030;stroke-width:10;stroke-linecap:round}
+    .fil6 {fill:none}
+    .fil5 {fill:#9DD2FF}
+    .fil4 {fill:red}
+    .fil3 {fill:url(#id0)}
+    .fil1 {fill:url(#id1)}
+    .fil2 {fill:url(#id2)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="251.527" y1="53.169" x2="251.527" y2="403.493">
+   <stop offset="0" style="stop-color:#D8D8D8"/>
+   <stop offset="1" style="stop-color:#F2F2F2"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="172.432" y1="385.472" x2="215.385" y2="385.472">
+   <stop offset="0" style="stop-color:#0083DB"/>
+   <stop offset="1" style="stop-color:#2EACFF"/>
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="287.67" y1="385.472" x2="330.622" y2="385.472">
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil1 str1" d="M194 302c0,26 -26,26 -26,52l0 115 21 0 31 -84 -26 -83z"/>
+  <path class="fil2 str1" d="M309 302c0,26 26,26 26,52l0 115 -21 0 -31 -84 26 -83z"/>
+  <path class="fil3" d="M228 406l13 0 -10 21 41 0 -10 -20 13 -1c26,-52 39,-109 39,-167 0,-74 -10,-157 -62,-210 -53,53 -63,136 -63,210 0,58 13,115 39,167z"/>
+  <path class="fil4" d="M207 103l89 0c-10,-28 -24,-53 -44,-74 -21,21 -35,46 -45,74z"/>
+  <path class="fil5 str2" d="M252 260c11,0 20,9 20,21 0,11 -9,21 -20,21 -12,0 -21,-10 -21,-21 0,-12 9,-21 21,-21zm0 -63c11,0 20,9 20,21 0,11 -9,21 -20,21 -12,0 -21,-10 -21,-21 0,-12 9,-21 21,-21zm0 -63c11,0 20,9 20,21 0,12 -9,21 -20,21 -12,0 -21,-9 -21,-21 0,-12 9,-21 21,-21z"/>
+  <path class="fil6 str3" d="M228 406l13 0 -10 21 41 0 -10 -20 13 -1c26,-52 39,-109 39,-167 0,-74 -10,-157 -62,-210 -53,53 -63,136 -63,210 0,58 13,115 39,167z"/>
+  <line class="fil6 str4" x1="252" y1="317" x2="252" y2= "469" />
+ </g>
+</svg>

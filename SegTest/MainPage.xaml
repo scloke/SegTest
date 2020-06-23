@@ -1,0 +1,253 @@
+﻿<PageFunction
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:SegTest"
+    mc:Ignorable="d" 
+    x:Class="MainPage"
+    x:TypeArguments="sys:Object"
+    Height="Auto"
+    Width="Auto"
+    d:DesignWidth="1200" d:DesignHeight="800"
+    Title="MainPage">
+    <Grid>
+        <Grid.Resources>
+            <local:MultiplierConverter x:Key="MultiplierConverter"/>
+            <local:IndexOfConverter x:Key="IndexOfConverter"/>
+            <Style x:Key="CenterGridHeaderStyle" TargetType="DataGridColumnHeader">
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            </Style>
+            <ObjectDataProvider x:Key="PreStartEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="local:PreStartEnum" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </Grid.Resources>
+        <Grid.Background >
+            <ImageBrush ImageSource="Resources/TextureCardboard.png" Viewport="0,0,512,512" ViewportUnits="Absolute" TileMode="Tile" Stretch="None" AlignmentX="Left" AlignmentY="Top"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="ButtonBackground" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Panel.ZIndex="0" Fill="#33FF00FF"/>
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+            <Grid Name="GridIcons" DockPanel.Dock="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="24*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FF00FF"/>
+                <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="ButtonStartStop" HBInnerToolTip="Start Capture" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                    <local:HighlightButton x:Name="ButtonSaveVideo" HBInnerToolTip="Save Video" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                    <local:HighlightButton x:Name="ButtonLoadFrame" HBInnerToolTip="Load Video By Frame" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                    <local:HighlightButton x:Name="ButtonConfig" HBInnerToolTip="Configuration" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                    <local:HighlightButton x:Name="ButtonExit" HBInnerToolTip="Exit" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                </StackPanel>
+            </Grid>
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="12*"/>
+                    <RowDefinition Height="12*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Horizontal" Grid.ZIndex="2">
+                    <TextBlock Text="Device" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <local:HighlightComboBox x:Name="ComboBoxDevice" InnerToolTip="Current Device" FontMultiplier="1.5" HCBReferenceHeight="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.96}" HCBReferenceWidth="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}" WidthMultiplier="16"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+
+                    <TextBlock Text="Profile" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <local:HighlightComboBox x:Name="ComboBoxProfile" InnerToolTip="Current Profile" FontMultiplier="1.5" HCBReferenceHeight="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.96}" HCBReferenceWidth="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}" WidthMultiplier="6"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+
+                    <TextBlock Text="Resolution" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <local:HighlightComboBox x:Name="ComboBoxResolution" InnerToolTip="Current Resolution" FontMultiplier="1.5" HCBReferenceHeight="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.96}" HCBReferenceWidth="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}" WidthMultiplier="6"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+
+                    <TextBlock Text="Replay" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <local:HighlightButton x:Name="ButtonRewind" HBInnerToolTip="Rewind Playback" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonBack" HBInnerToolTip="Back One Frame" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonPause" HBInnerToolTip="Pause" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonForward" HBInnerToolTip="Forward One Frame" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonPlay" HBInnerToolTip="Forward Playback" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonPlayView" HBInnerToolTip="Play View" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                    <local:HighlightButton x:Name="ButtonEntrance" HBInnerToolTip="Subject Entrance" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="ButtonSeated" HBInnerToolTip="Subject Seated" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                    <local:HighlightComboBox x:Name="ComboBoxFrames" InnerToolTip="Stop Frame" FontMultiplier="1.5" HCBReferenceHeight="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.96}" HCBReferenceWidth="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}" WidthMultiplier="3"/>
+                    <TextBlock Text="Frame: " Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <TextBlock x:Name="TextFrame" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                    <TextBlock Text="Time (ms): " Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <TextBlock x:Name="TextTime" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                    <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                </StackPanel>
+                <Image Name="ImageL" Grid.ZIndex="2" Grid.Row="1" Grid.Column="0" Stretch="Uniform" Visibility="Hidden"/>
+                <Image Name="ImageR" Grid.ZIndex="2" Grid.Row="1" Grid.Column="1" Stretch="Uniform" Visibility="Hidden"/>
+
+                <Rectangle Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Panel.ZIndex="0" Fill="#33FF00FF"/>
+                <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="{Binding ElementName=GridIcons, Path=ActualWidth, Mode=Default}"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="TextImageL" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextImageR" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextTimer" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="Bold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextTimer1" Grid.Row="1" Grid.Column="0" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="Bold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextTimer2" Grid.Row="1" Grid.Column="1" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="Bold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextTimer3" Grid.Row="1" Grid.Column="2" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="Bold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <TextBlock Name="TextTimer4" Grid.Row="1" Grid.Column="3" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="Bold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <StackPanel Name="StackGrabCut" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Horizontal" Grid.ZIndex="2">
+                            <TextBlock Text="Adjust" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonAdjust" HBInnerToolTip="Adjust Ground Truth" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Selection" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonSelection" HBInnerToolTip="Selection Area" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Foreground" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonSelectForeground" HBInnerToolTip="Select Foreground" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Background" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonSelectBackground" HBInnerToolTip="Select Background" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Copy" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonCopySelections" HBInnerToolTip="Copy Selections" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Load" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonLoadSelections" HBInnerToolTip="Load Selections" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                            <TextBlock Text="Save" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                            <local:HighlightButton x:Name="ButtonSaveSelections" HBInnerToolTip="Save Selections" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                            <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Horizontal" Grid.ZIndex="2">
+                        <TextBlock Text="Add" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonAddClip" HBInnerToolTip="Add Clip" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Remove" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonRemoveClip" HBInnerToolTip="Remove Clip" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Load" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonLoadClips" HBInnerToolTip="Load Clips" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Save" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonSaveClips" HBInnerToolTip="Save Clips" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Convert Video" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonProcessVideo" HBInnerToolTip="Process Colour Video" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Ground Truth" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonGroundTruth" HBInnerToolTip="Process Ground Truth Video" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Noise" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonNoise" HBInnerToolTip="Create Noise Data" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Cut" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonCut" HBInnerToolTip="Cut Video Clips" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Accuracy" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonAccuracy" HBInnerToolTip="Determine Accuracy" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="All" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonAll" HBInnerToolTip="Process All" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                        <TextBlock Text="Export" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.40}"/>
+                        <local:HighlightButton x:Name="ButtonExport" HBInnerToolTip="Export Results" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                        <Rectangle Width="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.25}"/>
+                    </StackPanel>
+                    <DataGrid Name="ClipDataGrid" Grid.Row="3" Grid.Column="0" Grid.RowSpan="8" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" MouseRightButtonDown="ClipRightClick_Handler">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                            <Grid Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <Setter Property="Height" Value="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.5}"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="No" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}">
+                                <DataGridTextColumn.Binding>
+                                    <MultiBinding Converter="{StaticResource IndexOfConverter}">
+                                        <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}" />
+                                        <Binding Path="."/>
+                                        <Binding>
+                                            <Binding.Source>
+                                                <sys:Int32>1</sys:Int32>
+                                            </Binding.Source>
+                                        </Binding>
+                                    </MultiBinding>
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description, Mode=TwoWay}" Width="4*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name, Mode=TwoWay}" Width="2*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Colour" Binding="{Binding ColourFrames, Mode=TwoWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Depth" Binding="{Binding DepthFrames, Mode=TwoWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Process" Binding="{Binding ProcessingFrames, Mode=TwoWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Entrance (Frame)" Binding="{Binding ClipEntrance, Mode=TwoWay}" IsReadOnly="True" Width="2*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridTextColumn Header="Seated (Frame)" Binding="{Binding ClipSeated, Mode=TwoWay}" IsReadOnly="True" Width="2*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridComboBoxColumn Header="Pre-Start (s)" ItemsSource="{Binding Source={StaticResource PreStartEnum}}" SelectedItemBinding="{Binding PreStart, Mode=TwoWay}" Width="2*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Ignore Depth" Binding="{Binding IgnoreDepth, Mode=TwoWay}" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Alt. Motion" Binding="{Binding AltMotion, Mode=TwoWay}" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Video" Binding="{Binding ProcessedVideo, Mode=TwoWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Ground Truth" Binding="{Binding ProcessedGroundTruth, Mode=TwoWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Cut" Binding="{Binding ProcessedCut, Mode=OneWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Segment" Binding="{Binding ProcessedSegmented, Mode=OneWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                            <DataGridCheckBoxColumn Header="Accuracy" Binding="{Binding ProcessedAccuracy, Mode=OneWay}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</PageFunction>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 500 500"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:#2B2A29;stroke-width:2}
+    .str0 {stroke:#434242;stroke-width:10}
+    .str1 {stroke:#F2F2F2;stroke-width:10;stroke-linecap:round}
+    .fil4 {fill:none}
+    .fil0 {fill:#303030}
+    .fil5 {fill:#D1ECFF}
+    .fil2 {fill:#E5E5E5}
+    .fil1 {fill:url(#id0)}
+    .fil3 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="250" y1="433.332" x2="250" y2="140.003">
+   <stop offset="0" style="stop-color:#404040"/>
+   <stop offset="1" style="stop-color:#686868"/>
+  </linearGradient>
+  <radialGradient id="id1" gradientUnits="objectBoundingBox" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+   <stop offset="0" style="stop-color:#5DBEFF"/>
+   <stop offset="1" style="stop-color:#0099FF"/>
+  </radialGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M51 119l183 0 26 -63c3,-5 5,-10 11,-10l126 0c5,0 8,5 10,10l27 63 15 0c12,0 21,9 21,21l0 293c0,12 -9,21 -21,21l-398 0c-12,0 -21,-9 -21,-21l0 -293c0,-12 9,-21 21,-21zm26 -31l63 0c3,0 5,2 5,5l0 5 11 0 0 21 -95 0 0 -21 11 0 0 -5c0,-3 2,-5 5,-5z"/>
+  <rect class="fil1" x="51" y="140" width="398" height="293" rx="10" ry="10"/>
+  <circle class="fil2" cx="250" cy="297" r="126"/>
+  <circle class="fil3 str0" cx="250" cy="297" r="84"/>
+  <circle class="fil2" cx="418" cy="171" r="16"/>
+  <path class="fil4 str1" d="M187 301c0,-1 0,-2 0,-4 0,-35 28,-63 63,-63"/>
+  <rect class="fil5 str2" x="302" y="67" width="62.8552" height="41.9052" rx="10" ry="10"/>
+ </g>
+</svg>

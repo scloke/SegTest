@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="XAMLBack" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Geometry="F1 M 285.242,76.6486L 76.6696,284.891C 65.2469,296.315 53.6603,307.903 53.4963,330.75L 53.4963,330.75C 53.3336,352.13 62.4736,363.39 76.6696,377.59L 285.242,586.159C 296.828,597.746 308.415,609.334 331.588,609.334L 331.588,609.334C 354.763,609.334 377.938,586.159 377.938,562.984L 377.938,99.8232C 377.938,76.6486 354.763,53.4725 331.588,53.4725L 331.588,53.4725C 308.415,53.4725 296.828,65.0619 285.242,76.6486 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="1,0.500001" EndPoint="-2.58669e-007,0.500001">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FF008AFF" Offset="0"/>
+									<GradientStop Color="#FF00AAFF" Offset="1"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Geometry="F1 M 76.6707,377.589C 62.4733,363.391 53.3333,352.129 53.496,330.751C 53.66,307.903 65.248,296.315 76.6707,284.892L 285.241,76.6479C 296.828,65.0613 308.416,53.4733 331.588,53.4733C 354.763,53.4733 377.937,76.6479 377.937,99.8226L 377.937,562.984C 377.937,586.159 354.763,609.333 331.588,609.333C 308.416,609.333 296.828,597.745 285.241,586.159L 76.6707,377.589 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="26.6667" MiterLimit="2.75" Brush="#FF434242"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

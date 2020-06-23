@@ -1,0 +1,10 @@
+_*/
+debug/
+release/
+build_*/
+dataset*/
+binaries*/
+Makefile*
+*.exe
+*.dll
+*.pro.user

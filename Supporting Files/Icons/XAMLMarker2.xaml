@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="XAMLMarker" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Geometry="F1 M 668.805,831.672L 129.089,831.672L 129.089,291.956L 668.805,291.956M 49.72,911.041L 748.176,911.041L 748.176,212.585L 49.72,212.585L 49.72,911.041 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="13.3333" MiterLimit="2.75" Brush="#FF434242"/>
+						</GeometryDrawing.Pen>
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.5,0.969988" EndPoint="0.5,0.029992">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FF26A8FF" Offset="0"/>
+									<GradientStop Color="#FF0075C3" Offset="1"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<DrawingGroup ClipGeometry="F1 M 0,0.146606L 793.701,0.146606L 793.701,1122.67L 0,1122.67L 0,0.146606 Z ">
+						<DrawingGroup.Children>
+							<GeometryDrawing Brush="#FF000000" Geometry="F1 M 501.552,660.772L 501.552,715.147L 296.344,715.147C 298.564,694.593 305.231,675.115 316.344,656.709C 327.453,638.308 349.397,613.897 382.177,583.48C 408.564,558.897 424.745,542.231 430.719,533.48C 438.772,521.397 442.801,509.453 442.801,497.647C 442.801,484.593 439.293,474.557 432.281,467.543C 425.265,460.531 415.579,457.021 403.219,457.021C 390.996,457.021 381.272,460.704 374.052,468.064C 366.829,475.427 362.663,487.647 361.552,504.731L 303.219,498.897C 306.689,466.677 317.593,443.552 335.927,429.521C 354.26,415.495 377.177,408.48 404.677,408.48C 434.813,408.48 458.495,416.605 475.719,432.855C 492.939,449.105 501.552,469.313 501.552,493.48C 501.552,507.231 499.084,520.323 494.156,532.751C 489.224,545.183 481.412,558.204 470.719,571.813C 463.635,580.844 450.856,593.829 432.385,610.772C 413.912,627.719 402.209,638.968 397.281,644.521C 392.349,650.079 388.356,655.496 385.301,660.772L 501.552,660.772 Z "/>
+						</DrawingGroup.Children>
+					</DrawingGroup>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

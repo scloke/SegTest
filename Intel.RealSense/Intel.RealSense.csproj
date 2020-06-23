@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FA1B1B6-49CE-3BEC-879E-9719EF64742F}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Intel.RealSense</ProjectName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>Build\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MinSizeRel|Win32'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MinSizeRel|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelWithDebInfo|Win32'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelWithDebInfo|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>Build\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32' Or '$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\Debug\</OutputPath>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>Intel.RealSense</AssemblyName>
+    <DebugType>full</DebugType>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <Optimize>false</Optimize>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32' Or '$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <OutputPath>D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\Release\</OutputPath>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>Intel.RealSense</AssemblyName>
+    <DebugType>none</DebugType>
+    <ErrorReport>queue</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32' Or '$(Configuration)|$(Platform)'=='MinSizeRel|x86'" Label="Configuration">
+    <OutputPath>D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\MinSizeRel\</OutputPath>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>Intel.RealSense</AssemblyName>
+    <DebugType>none</DebugType>
+    <LangVersion>6</LangVersion>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32' Or '$(Configuration)|$(Platform)'=='RelWithDebInfo|x86'" Label="Configuration">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\RelWithDebInfo\</OutputPath>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>Intel.RealSense</AssemblyName>
+    <DebugType>full</DebugType>
+    <LangVersion>6</LangVersion>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.CSharp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.CSharp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <None Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt">
+      <Link>CMakeLists.txt</Link>
+    </None>
+  </ItemGroup>
+  <Target Condition="'$(Configuration)|$(Platform)'=='Debug|Win32' Or '$(Configuration)|$(Platform)'=='Debug|x86'" Name="CustomCommand_Debug_c24f7b61bebd1b87ff187c148fe0082d" Inputs="D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt" Outputs="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\wrappers\csharp\Intel.RealSense\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt" />
+    <Exec Command="setlocal&#xD;&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; &quot;-HD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master&quot; &quot;-BD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build&quot; --check-stamp-file &quot;D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build/wrappers/csharp/Intel.RealSense/CMakeFiles/generate.stamp&quot;&#xD;&#xA;if %errorlevel% neq 0 goto :cmEnd&#xD;&#xA;:cmEnd&#xD;&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xD;&#xA;:cmErrorLevel&#xD;&#xA;exit /b %1&#xD;&#xA;:cmDone&#xD;&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='Release|Win32' Or '$(Configuration)|$(Platform)'=='Release|x86'" Name="CustomCommand_Release_c24f7b61bebd1b87ff187c148fe0082d" Inputs="D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt" Outputs="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\wrappers\csharp\Intel.RealSense\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt" />
+    <Exec Command="setlocal&#xD;&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; &quot;-HD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master&quot; &quot;-BD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build&quot; --check-stamp-file &quot;D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build/wrappers/csharp/Intel.RealSense/CMakeFiles/generate.stamp&quot;&#xD;&#xA;if %errorlevel% neq 0 goto :cmEnd&#xD;&#xA;:cmEnd&#xD;&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xD;&#xA;:cmErrorLevel&#xD;&#xA;exit /b %1&#xD;&#xA;:cmDone&#xD;&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32' Or '$(Configuration)|$(Platform)'=='MinSizeRel|x86'" Name="CustomCommand_MinSizeRel_c24f7b61bebd1b87ff187c148fe0082d" Inputs="D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt" Outputs="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\wrappers\csharp\Intel.RealSense\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt" />
+    <Exec Command="setlocal&#xD;&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; &quot;-HD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master&quot; &quot;-BD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build&quot; --check-stamp-file &quot;D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build/wrappers/csharp/Intel.RealSense/CMakeFiles/generate.stamp&quot;&#xD;&#xA;if %errorlevel% neq 0 goto :cmEnd&#xD;&#xA;:cmEnd&#xD;&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xD;&#xA;:cmErrorLevel&#xD;&#xA;exit /b %1&#xD;&#xA;:cmDone&#xD;&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32' Or '$(Configuration)|$(Platform)'=='RelWithDebInfo|x86'" Name="CustomCommand_RelWithDebInfo_c24f7b61bebd1b87ff187c148fe0082d" Inputs="D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt;D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\CMakeLists.txt" Outputs="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\build\wrappers\csharp\Intel.RealSense\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/wrappers/csharp/Intel.RealSense/CMakeLists.txt" />
+    <Exec Command="setlocal&#xD;&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; &quot;-HD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master&quot; &quot;-BD:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build&quot; --check-stamp-file &quot;D:/File Store/Blob Documents/Visual Studio 2017/Projects/ARTransmission/Supporting Files/Software/librealsense-master/build/wrappers/csharp/Intel.RealSense/CMakeFiles/generate.stamp&quot;&#xD;&#xA;if %errorlevel% neq 0 goto :cmEnd&#xD;&#xA;:cmEnd&#xD;&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xD;&#xA;:cmErrorLevel&#xD;&#xA;exit /b %1&#xD;&#xA;:cmDone&#xD;&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <ItemGroup>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Context.cs">
+      <Link>Context.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Device.cs">
+      <Link>Device.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Frame.cs">
+      <Link>Frame.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\FrameQueue.cs">
+      <Link>FrameQueue.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\FrameSet.cs">
+      <Link>FrameSet.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Helpers.cs">
+      <Link>Helpers.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\NativeMethods.cs">
+      <Link>NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Pipeline.cs">
+      <Link>Pipeline.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Processing.cs">
+      <Link>Processing.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Sensor.cs">
+      <Link>Sensor.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\StreamProfile.cs">
+      <Link>StreamProfile.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Types.cs">
+      <Link>Types.cs</Link>
+    </Compile>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\SoftwareDevice.cs">
+      <Link>SoftwareDevice.cs</Link>
+    </Compile>
+    <None Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\.nuget\Intel.RealSense.targets">
+      <Link>.nuget\Intel.RealSense.targets</Link>
+    </None>
+    <Compile Include="D:\File Store\Blob Documents\Visual Studio 2017\Projects\ARTransmission\Supporting Files\Software\librealsense-master\wrappers\csharp\Intel.RealSense\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'MinSizeRel'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RelWithDebInfo'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildDependsOn>
+      CustomCommand_Debug_c24f7b61bebd1b87ff187c148fe0082d;
+      CustomCommand_MinSizeRel_c24f7b61bebd1b87ff187c148fe0082d;
+      CustomCommand_RelWithDebInfo_c24f7b61bebd1b87ff187c148fe0082d;
+      CustomCommand_Release_c24f7b61bebd1b87ff187c148fe0082d;
+      $(BuildDependsOn)
+    </BuildDependsOn>
+  </PropertyGroup>
+</Project>

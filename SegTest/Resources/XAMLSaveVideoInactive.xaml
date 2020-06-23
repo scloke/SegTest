@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="XAMLSaveVideoInactive" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Brush="#FF008BFF" Geometry="F1 M 365.927,544.688L 524.668,385.946C 532.606,378.01 540.542,370.073 540.542,354.198C 540.542,338.325 524.668,322.45 508.794,322.45L 429.423,322.45C 421.487,322.45 413.55,314.513 413.55,306.577L 413.55,68.6251C 413.55,60.6877 405.614,52.7518 397.676,52.7518L 270.683,52.7518C 262.747,52.7518 254.81,60.6877 254.81,68.6251L 254.81,306.577C 254.81,314.513 246.872,322.45 238.935,322.45L 159.566,322.45C 143.691,322.45 127.818,338.325 127.818,354.198C 127.818,370.073 135.755,378.01 143.691,385.946L 302.431,544.688C 323.862,566.117 344.498,566.117 365.927,544.688 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="26.6667" MiterLimit="2.75" Brush="#FF434242"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF434242" Geometry="F1 M 32.4147,608.341L 635.628,608.341C 653.088,608.341 667.375,622.629 667.375,640.091L 667.375,703.587C 667.375,721.047 653.088,735.333 635.628,735.333L 32.4147,735.333C 14.9533,735.333 0.666682,721.047 0.666682,703.587L 0.666682,640.091C 0.666682,622.629 14.9533,608.341 32.4147,608.341 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="0.333333" MiterLimit="2.75" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M 541.811,640.09L 605.307,640.09C 614.039,640.09 621.182,647.233 621.182,655.963C 621.182,664.694 614.039,671.838 605.307,671.838L 541.811,671.838C 533.081,671.838 525.938,664.694 525.938,655.963C 525.938,647.233 533.081,640.09 541.811,640.09 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="0.333333" MiterLimit="2.75" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M 413.391,640.09L 476.887,640.09C 485.617,640.09 492.761,647.233 492.761,655.963C 492.761,664.694 485.617,671.838 476.887,671.838L 413.391,671.838C 404.66,671.838 397.517,664.694 397.517,655.963C 397.517,647.233 404.66,640.09 413.391,640.09 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="0.333333" MiterLimit="2.75" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

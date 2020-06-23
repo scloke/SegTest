@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 500 500"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#303030;stroke-width:10}
+    .fil2 {fill:url(#id0)}
+    .fil1 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="250.005" y1="157.817" x2="250.005" y2="342.193">
+   <stop offset="0" style="stop-color:#D8D8D8"/>
+   <stop offset="1" style="stop-color:#F2F2F2"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="91.607" y1="408.404" x2="408.403" y2="91.606">
+   <stop offset="0" style="stop-color:#0081D8"/>
+   <stop offset="0.478431" style="stop-color:#27A9FF"/>
+   <stop offset="1" style="stop-color:#0081D8"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil1 str1" d="M337 392l43 30c3,2 7,3 9,0l33 -33c3,-2 2,-6 0,-9l-30 -44c9,-14 15,-30 19,-47l52 -9c4,-1 7,-3 7,-7l0 -46c0,-4 -3,-6 -7,-7l-52 -9c-4,-17 -11,-33 -20,-47l31 -44c2,-3 3,-7 0,-9l-33 -33c-2,-3 -6,-2 -9,0l-44 31c-14,-9 -30,-16 -47,-20l-9 -52c-1,-4 -3,-7 -7,-7l-46 0c-4,0 -6,3 -7,7l-9 52c-17,4 -33,11 -47,20l-44 -31c-3,-2 -7,-3 -9,0l-33 33c-3,2 -2,6 0,9l31 44c-9,14 -16,30 -20,47l-52 9c-4,1 -7,3 -7,7l0 46c0,4 3,6 7,7l52 9c4,17 10,33 19,47l-30 44c-2,3 -3,7 0,9l33 33c2,3 6,2 9,0l43 -30c15,9 31,15 48,19l9 52c1,4 3,7 7,7l46 0c4,0 6,-3 7,-7l9 -52c17,-4 33,-10 48,-19zm-87 -194c-29,0 -52,23 -52,52 0,29 23,52 52,52 29,0 52,-23 52,-52 0,-29 -23,-52 -52,-52z"/>
+  <path class="fil2 str1" d="M250 145c-58,0 -105,47 -105,105 0,58 47,105 105,105 58,0 105,-47 105,-105 0,-58 -47,-105 -105,-105zm0 53c-29,0 -52,23 -52,52 0,29 23,52 52,52 29,0 52,-23 52,-52 0,-29 -23,-52 -52,-52z"/>
+ </g>
+</svg>

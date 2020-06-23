@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="XAMLStanding" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Geometry="F1 M 321.761,394.353C 309.553,394.353 299.616,404.289 299.616,416.497L 299.616,642.572C 299.616,654.78 309.553,664.717 321.761,664.717L 329.26,664.717L 329.26,857.856C 329.26,878.208 345.816,894.761 366.167,894.761L 368.772,894.761C 389.123,894.761 405.677,878.208 405.677,857.856L 405.677,663.395C 414.323,660.376 420.572,652.228 420.572,642.572L 420.572,554.396L 443.937,604.491C 447.555,612.256 455.451,617.269 464.049,617.269L 464.049,617.269C 467.289,617.269 470.428,616.576 473.364,615.203L 488.417,608.184C 493.769,605.689 497.827,601.244 499.843,595.671L 499.843,595.671C 501.848,590.113 501.576,584.099 499.068,578.761L 419.851,410.185C 419.667,409.796 419.401,409.448 419.201,409.071L 419.201,409.071C 416.131,400.519 408.027,394.353 398.429,394.353L 321.761,394.353 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="2.57399e-006,0.5" EndPoint="1,0.5">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FF008AFF" Offset="0"/>
+									<GradientStop Color="#FF00AAFF" Offset="1"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<DrawingGroup ClipGeometry="F1 M 0,0.146606L 793.701,0.146606L 793.701,1122.67L 0,1122.67L 0,0.146606 Z ">
+						<DrawingGroup.Children>
+							<GeometryDrawing Geometry="F1 M 499.068,578.762L 419.852,410.186C 419.666,409.795 419.401,409.448 419.201,409.071C 416.13,400.518 408.026,394.352 398.43,394.352L 321.761,394.352C 309.553,394.352 299.617,404.29 299.617,416.498L 299.617,642.571C 299.617,654.78 309.553,664.718 321.761,664.718L 329.26,664.718L 329.26,857.855C 329.26,878.207 345.816,894.762 366.168,894.762L 368.772,894.762C 389.124,894.762 405.677,878.207 405.677,857.855L 405.677,663.395C 414.322,660.376 420.573,652.228 420.573,642.571L 420.573,554.396L 443.937,604.491C 447.554,612.256 455.45,617.27 464.049,617.27C 467.289,617.27 470.428,616.576 473.365,615.202L 488.417,608.183C 493.768,605.688 497.825,601.243 499.844,595.671C 501.849,590.114 501.576,584.098 499.068,578.762 Z ">
+								<GeometryDrawing.Pen>
+									<Pen Thickness="13.3333" MiterLimit="2.75" Brush="#FF000000"/>
+								</GeometryDrawing.Pen>
+							</GeometryDrawing>
+						</DrawingGroup.Children>
+					</DrawingGroup>
+					<GeometryDrawing Geometry="F1 M 292.529,295.605C 292.529,332.856 322.843,363.161 360.089,363.161L 360.089,363.161C 397.333,363.161 427.633,332.856 427.633,295.605L 427.633,295.605C 427.633,258.359 397.339,228.052 360.089,228.052L 360.089,228.052C 322.836,228.052 292.529,258.359 292.529,295.605 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="-4.51764e-007,0.500002" EndPoint="0.999996,0.500002">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FF008AFF" Offset="0"/>
+									<GradientStop Color="#FF00AAFF" Offset="1"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<DrawingGroup ClipGeometry="F1 M 0,0.146606L 793.701,0.146606L 793.701,1122.67L 0,1122.67L 0,0.146606 Z ">
+						<DrawingGroup.Children>
+							<GeometryDrawing Geometry="F1 M 360.089,363.161C 397.333,363.161 427.633,332.856 427.633,295.605C 427.633,258.357 397.34,228.052 360.089,228.052C 322.837,228.052 292.529,258.357 292.529,295.605C 292.529,332.856 322.841,363.161 360.089,363.161 Z ">
+								<GeometryDrawing.Pen>
+									<Pen Thickness="13.3333" MiterLimit="2.75" Brush="#FF000000"/>
+								</GeometryDrawing.Pen>
+							</GeometryDrawing>
+						</DrawingGroup.Children>
+					</DrawingGroup>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

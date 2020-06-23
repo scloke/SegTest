@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="XAMLCompress" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<DrawingGroup ClipGeometry="F1 M 0,-0.368042L 1122.52,-0.368042L 1122.52,793.333L 0,793.333L 0,-0.368042 Z ">
+						<DrawingGroup.Children>
+							<GeometryDrawing Brush="#FF303030" Geometry="F1 M 330.747,711.939L 218.042,597.645C 211.693,592.883 206.93,586.533 206.93,575.421C 206.93,564.309 218.042,553.197 229.154,553.197L 286.299,553.197C 291.062,553.197 297.411,546.849 297.411,542.085L 297.411,253.18C 297.411,248.417 291.062,242.068 286.299,242.068L 229.154,242.068C 218.042,242.068 206.93,230.956 206.93,219.844C 206.93,208.732 211.693,202.383 218.042,197.62L 330.747,83.3281C 338.685,75.3907 346.621,72.2161 354.558,72.2161C 360.907,72.2161 368.845,75.3907 376.782,83.3281L 489.489,197.62C 495.837,202.383 502.187,208.732 502.187,219.844C 502.187,230.956 489.489,242.068 478.377,242.068L 422.817,242.068C 416.467,242.068 410.117,248.417 410.117,253.18L 410.117,542.085C 410.117,546.849 416.467,553.197 422.817,553.197L 478.377,553.197C 489.489,553.197 502.187,564.309 502.187,575.421C 502.187,586.533 495.837,592.883 489.489,597.645L 376.782,711.939C 368.845,719.875 360.907,723.051 354.558,723.051C 346.621,723.051 338.685,719.875 330.747,711.939 Z "/>
+						</DrawingGroup.Children>
+					</DrawingGroup>
+					<GeometryDrawing Geometry="F1 M 562.508,611.932L 911.737,611.932L 911.737,691.301L 562.508,691.301M 562.508,437.317L 911.737,437.317L 911.737,516.687L 562.508,516.687M 562.508,262.704L 911.737,262.704L 911.737,342.075L 562.508,342.075M 562.508,88.0894L 911.737,88.0894L 911.737,167.459L 562.508,167.459L 562.508,88.0894 Z ">
+						<GeometryDrawing.Pen>
+							<Pen Thickness="13.3333" MiterLimit="2.75" Brush="#FF303030"/>
+						</GeometryDrawing.Pen>
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.499999,0.460001" EndPoint="0.499999,0.540001">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FF16A1FF" Offset="0"/>
+									<GradientStop Color="#FF0082DB" Offset="1"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

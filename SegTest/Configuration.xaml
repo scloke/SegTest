@@ -1,0 +1,173 @@
+﻿<PageFunction
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:SegTest"
+    mc:Ignorable="d" 
+    x:Class="Configuration"
+    x:TypeArguments="sys:Object"
+    Height="Auto"
+    Width="Auto"
+    d:DesignWidth="1600" d:DesignHeight="1200"
+    Title="Configuration">
+    <Grid>
+        <Grid.Resources>
+            <local:MultiplierConverter x:Key="MultiplierConverter"/>
+        </Grid.Resources>
+        <Grid.Background >
+            <ImageBrush ImageSource="Resources/TextureCardboard.png" Viewport="0,0,512,512" ViewportUnits="Absolute" TileMode="Tile" Stretch="None" AlignmentX="Left" AlignmentY="Top"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="ButtonBackground" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Panel.ZIndex="0" Fill="#33FF00FF"/>
+        <Rectangle Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="0" Panel.ZIndex="0" Fill="#33FF00FF"/>
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+            <Grid DockPanel.Dock="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FF00FF"/>
+                <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="ButtonMain" HBInnerToolTip="Main" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                    <local:HighlightButton x:Name="ButtonExit" HBInnerToolTip="Exit" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                </StackPanel>
+            </Grid>
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FF00FF"/>
+                <DockPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <TextBlock DockPanel.Dock="Left" Text="Default Save Location" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <local:HighlightButton x:Name="ConfigSelectSave" HBInnerToolTip="Select Save Location" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightTextBox DockPanel.Dock="Right" x:Name="ConfigSaveLocation" InnerToolTip="Save Location" IsEnabled="False" FontMultiplier="1.25" HTBReferenceHeight="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=2}"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FFFF"/>
+                <DockPanel Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="PowerFrequencyPrevious" DockPanel.Dock="Left" HBInnerToolTip="Previous Powerline Frequency" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="PowerFrequencyNext" HBInnerToolTip="Next Powerline Frequency" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Name="TextPowerFrequency" Text="" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FFFF"/>
+                <DockPanel Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="BacklightCompensationOn" DockPanel.Dock="Left" HBInnerToolTip="Backlight Compensation On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="BacklightCompensationOff" HBInnerToolTip="Backlight Compensation Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Backlight Compensation" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="11" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FFFF"/>
+                <DockPanel Grid.Row="11" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="EnableAutoExposureOn" DockPanel.Dock="Left" HBInnerToolTip="Enable AutoExposure" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="EnableAutoExposureOff" HBInnerToolTip="Disable AutoExposure" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="AutoExposure" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="14" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FFFF"/>
+                <DockPanel Grid.Row="14" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="EnableAutoWhiteBalanceOn" DockPanel.Dock="Left" HBInnerToolTip="Enable Auto White Balance" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="EnableAutoWhiteBalanceOff" HBInnerToolTip="Disable Auto White Balance" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Auto White Balance" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="17" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FFFF"/>
+                <DockPanel Grid.Row="17" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="EmitterEnabledOn" DockPanel.Dock="Left" HBInnerToolTip="Emitter Enabled" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="EmitterEnabledOff" HBInnerToolTip="Emitter Disabled" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Structured Light Emitter" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FFFF00"/>
+                <DockPanel Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="DisparityFilterOn" DockPanel.Dock="Left" HBInnerToolTip="Disparity Filter On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="DisparityFilterOff" HBInnerToolTip="Disparity Filter Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Disparity Filter" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="8" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FFFF00"/>
+                <DockPanel Grid.Row="8" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="SpatialFilterOn" DockPanel.Dock="Left" HBInnerToolTip="Spatial Filter On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="SpatialFilterOff" HBInnerToolTip="Spatial Filter Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Spatial Filter" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="11" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FFFF00"/>
+                <DockPanel Grid.Row="11" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="TemporalFilterOn" DockPanel.Dock="Left" HBInnerToolTip="Temporal Filter On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="TemporalFilterOff" HBInnerToolTip="Temporal Filter Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Temporal Filter" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="14" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#33FFFF00"/>
+                <DockPanel Grid.Row="14" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="HoleFillingFilterOn" DockPanel.Dock="Left" HBInnerToolTip="Hole-Filling Filter On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="HoleFillingFilterOff" HBInnerToolTip="Hole-Filling Filter Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Hole-Filling Filter Filter" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+
+                <Rectangle Grid.Row="17" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1" Fill="#3300FF00"/>
+                <DockPanel Grid.Row="17" Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="2">
+                    <local:HighlightButton x:Name="CaptureSettingOn" DockPanel.Dock="Left" HBInnerToolTip="Capture Setting On" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <local:HighlightButton x:Name="CaptureSettingOff" HBInnerToolTip="Capture Setting Off" HBReference="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=1.2}"/>
+                    <TextBlock Text="Capture Setting" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" FontWeight="SemiBold" FontSize="{Binding ElementName=ButtonBackground, Path=ActualHeight, Mode=Default, Converter={StaticResource MultiplierConverter}, ConverterParameter=0.64}"/>
+                    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ZIndex="1"/>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</PageFunction>
